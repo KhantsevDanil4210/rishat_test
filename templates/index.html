@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Последние обновления | Yatube<{% endblock %}
+{% block content %}
+
+        <h1>Последние обновления на сайте</h1>
+        {% load cache %}
+        {% cache 20 index_page %}
+        {% for item in page %}
+        <p>{{ item.name|linebreaksbr }}  <li class="list-group-item">
+    <a class="btn btn-lg btn-primary"
+            href="{% url 'item' item.id %}" role="button">
+    Купить
+    </a>
+</li>
+{{ item.price|linebreaksbr }}</p>
+        <p>{{ item.description|linebreaksbr }}</p>
+        <hr>
+        {% endfor %}
+        {% endcache %}
+{% endblock %}

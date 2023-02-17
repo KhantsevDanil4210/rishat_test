@@ -1,0 +1,12 @@
+**/__pycache__
+**/.idea
+/.vscode/
+/venv/
+/uvenv/
+/venv_win/
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+package.json
+package-lock.json
